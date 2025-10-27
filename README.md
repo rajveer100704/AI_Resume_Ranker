@@ -36,10 +36,18 @@ Resume_Ranker/
 ├── requirements.txt # Python dependencies
 ├── Dockerfile # Docker setup
 ├── docker-compose.yml # Compose configuration
+│
 ├── templates/ # HTML files (Flask templates)
+│ ├── index.html
+│ └── results.html
+│
 ├── static/ # CSS/JS/Images
+│ └── styles.css
+│
 ├── resumes/ # Uploaded resumes
+│
 ├── uploads/ # Temporary uploads
+│
 └── Reports/ # Generated PDF reports
 
 
