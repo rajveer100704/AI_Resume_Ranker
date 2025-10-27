@@ -78,7 +78,7 @@ docker-compose up --build
 
 ---
 
-## 🧠 AI Scoring Logic
+### 🧠 AI Scoring Logic
 
   The ranking score combines three metrics:
 
@@ -92,7 +92,7 @@ docker-compose up --build
 
 ---
 
-## Advanced Tips
+### Advanced Tips
 
    Use a larger spaCy model for better accuracy:
    python -m spacy download en_core_web_md
@@ -100,11 +100,11 @@ docker-compose up --build
    Then edit ranker.py to use:
    nlp = spacy.load("en_core_web_md")
 
-## 🧑‍💻 Author
+### 🧑‍💻 Author
 
    Rajveer Singh Saggu
 
-##🏁 License
+### 🏁 License
 
    This project is licensed under the MIT License — feel free to use and modify.
 
