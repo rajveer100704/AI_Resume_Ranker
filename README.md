@@ -107,8 +107,3 @@ docker-compose up --build
 ### 🏁 License
 
    This project is licensed under the MIT License — feel free to use and modify.
-
-
----
-
-Would you like me to include a **“How to deploy on Render or Railway”** section too (so you can host it online easily)?
