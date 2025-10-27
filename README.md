@@ -51,6 +51,7 @@ Resume_Ranker/
 └── Reports/ # Generated PDF reports
 
 
+
 ---
 
 ## ⚙️ Installation
