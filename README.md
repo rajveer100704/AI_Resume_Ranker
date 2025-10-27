@@ -30,22 +30,22 @@ It evaluates resumes based on **keyword relevance, TF-IDF similarity**, and **se
 ## Project Structure
 Resume_Ranker/
 │
-├── app.py                # Flask app entry point  
-├── ranker.py             # Core AI logic for resume scoring  
-├── requirements.txt      # Python dependencies  
-├── Dockerfile            # Docker setup  
-├── docker-compose.yml    # Compose configuration  
+├── app.py               
+├── ranker.py             
+├── requirements.txt        
+├── Dockerfile             
+├── docker-compose.yml    
 │
-├── templates/            # HTML templates  
+├── templates/             
 │   ├── index.html  
 │   └── results.html  
 │
-├── static/               # CSS / JS / Images  
+├── static/               
 │   └── styles.css  
 │
-├── resumes/              # Uploaded resumes  
-├── uploads/              # Temporary uploads  
-└── Reports/              # Output ranked reports  
+├── resumes/             
+├── uploads/              
+└── Reports/               
 
 ---
 
