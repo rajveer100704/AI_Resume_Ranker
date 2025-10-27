@@ -1,0 +1,26 @@
+# Python virtual environments
+venv/
+.venv/
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment and secrets
+.env
+.DS_Store
+
+# IDE and editor settings
+.idea/
+.vscode/
+
+# Docker-related
+*.log
+docker-compose.override.yml
+*.pid
+
+# Build outputs
+build/
+dist/
+*.egg-info/

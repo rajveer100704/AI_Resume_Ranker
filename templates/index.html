@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Ranker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="AI Logo" class="logo">
+    <h1>AI Resume Ranker</h1>
+    <h2>Upload Resumes</h2>
+    <p>Let AI analyze and rank candidates based on your job description.</p>
+
+    <form action="/rank" method="POST" enctype="multipart/form-data">
+        <label>Job Description</label><br>
+        <textarea name="job_description" rows="5" required></textarea><br>
+
+        <label>Upload Multiple Resumes (PDFs)</label><br>
+        <input type="file" name="resumes" multiple required><br><br>
+
+        <button type="submit">⚡ Rank Resumes</button>
+    </form>
+
+    <footer>© 2025 AI Resume Ranker</footer>
+</div>
+</body>
+</html>

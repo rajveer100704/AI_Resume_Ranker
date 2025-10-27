@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ranking Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="AI Logo" class="logo">
+    <h1>AI Resume Ranker</h1>
+    <h2>Ranked Candidates</h2>
+    <p>Sorted in descending order by performance score.</p>
+
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>Candidate</th>
+            <th>Score (%)</th>
+        </tr>
+        {% for r in ranked %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ r.filename }}</td>
+            <td>{{ r.score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div style="margin-top:20px;">
+        <a href="/download/{{ pdf_path }}">📄 Download PDF Report</a><br>
+        <a href="/">⬅️ Back</a>
+    </div>
+
+    <footer>© 2025 AI Resume Ranker</footer>
+</div>
+</body>
+</html>
