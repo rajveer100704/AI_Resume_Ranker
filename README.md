@@ -1,109 +1,131 @@
 # 🧠 AI Resume Ranker
 
-AI Resume Ranker is a smart web application that ranks resumes against a given job description using NLP (Natural Language Processing) and AI scoring.  
-It evaluates resumes based on **keyword relevance, TF-IDF similarity**, and **semantic matching** to give recruiters an instant shortlist.
+**AI Resume Ranker** is a smart web application that ranks resumes against a given job description using **NLP** and **AI scoring**.
+It evaluates resumes based on **keyword relevance**, **TF-IDF similarity**, and **semantic matching** to give recruiters an instant shortlist.
 
 ---
 
 ## 🚀 Features
 
-- 🔍 **Automatic Resume Screening** — Upload multiple resumes and compare them to a job description.
-- 🤖 **AI-Powered Scoring** — Combines keyword, TF-IDF, and semantic similarity for accurate ranking.
-- 📊 **Detailed Reports** — Generates PDF reports showing candidate strengths and weaknesses.
-- 🐳 **Docker Support** — Easily run the app inside a Docker container.
-- 💾 **Web Interface** — Clean UI built using Flask, HTML, and TailwindCSS.
+* 🔍 **Automatic Resume Screening** — Upload multiple resumes and compare them to a job description.
+* 🤖 **AI-Powered Scoring** — Combines keyword, TF-IDF, and semantic similarity for accurate ranking.
+* 📊 **Detailed Reports** — Generates PDF reports highlighting candidate strengths and weaknesses.
+* 🐳 **Docker Support** — Run the app easily inside a Docker container.
+* 💾 **Clean Web Interface** — Built using Flask, HTML, and TailwindCSS.
 
 ---
 
-## 🧩 Tech Stack
+## 🧹 Tech Stack
 
-| Component | Technology Used |
-|------------|----------------|
-| Backend | Python (Flask) |
-| NLP & AI | spaCy, scikit-learn, TF-IDF |
-| Frontend | HTML, CSS, JS |
-| Containerization | Docker & Docker Compose |
-| Reports | FPDF / ReportLab |
+| Component            | Technology Used             |
+| -------------------- | --------------------------- |
+| **Backend**          | Python (Flask)              |
+| **NLP & AI**         | spaCy, scikit-learn, TF-IDF |
+| **Frontend**         | HTML, CSS, JavaScript       |
+| **Containerization** | Docker & Docker Compose     |
+| **Reports**          | FPDF / ReportLab            |
 
 ---
 
-## Project Structure
+## 📁 Project Structure
+
+```
 Resume_Ranker/
+├── app.py
+├── ranker.py
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
 │
-|
-├── app.py               
-├── ranker.py             
-├── requirements.txt        
-├── Dockerfile             
-├── docker-compose.yml    
+├── templates/
+│   ├── index.html
+│   └── results.html
 │
-├── templates/             
-│   ├── index.html  
-│   └── results.html  
+├── static/
+│   └── styles.css
 │
-├── static/               
-│   └── styles.css  
-│
-├── resumes/             
-├── uploads/              
-└── Reports/               
+├── resumes/
+├── uploads/
+└── Reports/
+```
 
 ---
 
 ## ⚙️ Installation
 
-### 🧮 1. Clone the Repository
+### 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/rajveer100704/AI_Resume_Ranker.git
 cd AI_Resume_Ranker
+```
 
+### 2️⃣ Create and Activate Virtual Environment
+
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
+### 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-docker-compose up --build
+### 4️⃣ Run with Docker (Optional)
 
----
-
-## Usage
-
-  Upload one or more resumes (.pdf / .docx).
-
-  Paste the job description in the text area.
-
-  Click Rank Resumes.
-
-  View and download detailed ranking reports.
+```bash
+docker compose up --build
+```
 
 ---
 
-### 🧠 AI Scoring Logic
+## 💻 Usage
 
-  The ranking score combines three metrics:
-
-   | Metric              | Description                | Weight |
-   | ------------------- | -------------------------- | ------ |
-   | Keyword Match       | Direct keyword overlap     | 0.45   |
-   | TF-IDF Similarity   | Textual relevance          | 0.45   |
-   | Semantic Similarity | Contextual meaning (spaCy) | 0.10   |
-
-    You can tune these weights in ranker.py to fit your hiring priorities.
+1. Upload one or more resumes (`.pdf` / `.docx`).
+2. Paste the job description in the text area.
+3. Click **“Rank Resumes”**.
+4. View and download detailed ranking reports.
 
 ---
 
-### Advanced Tips
+## 🧠 AI Scoring Logic
 
-   Use a larger spaCy model for better accuracy:
-   python -m spacy download en_core_web_md
+The overall ranking score combines three weighted metrics:
 
-   Then edit ranker.py to use:
-   nlp = spacy.load("en_core_web_md")
+| Metric                  | Description                | Weight |
+| ----------------------- | -------------------------- | ------ |
+| **Keyword Match**       | Direct keyword overlap     | 0.45   |
+| **TF-IDF Similarity**   | Textual relevance          | 0.45   |
+| **Semantic Similarity** | Contextual meaning (spaCy) | 0.10   |
 
-### 🧑‍💻 Author
+> 🔧 You can tune these weights in `ranker.py` to fit your hiring priorities.
 
-   Rajveer Singh Saggu
+---
 
-### 🏁 License
+## 🧠 Advanced Tips
 
-   This project is licensed under the MIT License — feel free to use and modify.
+Use a larger spaCy model for better semantic accuracy:
+
+```bash
+python -m spacy download en_core_web_md
+```
+
+Then update in `ranker.py`:
+
+```python
+nlp = spacy.load("en_core_web_md")
+```
+
+---
+
+## 👨‍💻 Author
+
+**Rajveer Singh Saggu**
+
+---
+
+## 🏁 License
+
+This project is licensed under the **MIT License** — feel free to use and modify.
