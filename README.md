@@ -30,6 +30,7 @@ It evaluates resumes based on **keyword relevance, TF-IDF similarity**, and **se
 ## Project Structure
 Resume_Ranker/
 │
+|
 ├── app.py               
 ├── ranker.py             
 ├── requirements.txt        
@@ -65,49 +66,47 @@ docker-compose up --build
 
 ---
 
-Usage
+## Usage
 
-Upload one or more resumes (.pdf / .docx).
+  Upload one or more resumes (.pdf / .docx).
 
-Paste the job description in the text area.
+  Paste the job description in the text area.
 
-Click Rank Resumes.
+  Click Rank Resumes.
 
-View and download detailed ranking reports.
-
----
-
-🧠 AI Scoring Logic
-
-The ranking score combines three metrics:
-
-| Metric              | Description                | Weight |
-| ------------------- | -------------------------- | ------ |
-| Keyword Match       | Direct keyword overlap     | 0.45   |
-| TF-IDF Similarity   | Textual relevance          | 0.45   |
-| Semantic Similarity | Contextual meaning (spaCy) | 0.10   |
-
-You can tune these weights in ranker.py to fit your hiring priorities.
+  View and download detailed ranking reports.
 
 ---
 
-Advanced Tips
+## 🧠 AI Scoring Logic
 
-Use a larger spaCy model for better accuracy:
-python -m spacy download en_core_web_md
+  The ranking score combines three metrics:
 
-Then edit ranker.py to use:
-nlp = spacy.load("en_core_web_md")
+   | Metric              | Description                | Weight |
+   | ------------------- | -------------------------- | ------ |
+   | Keyword Match       | Direct keyword overlap     | 0.45   |
+   | TF-IDF Similarity   | Textual relevance          | 0.45   |
+   | Semantic Similarity | Contextual meaning (spaCy) | 0.10   |
 
-🧑‍💻 Author
+    You can tune these weights in ranker.py to fit your hiring priorities.
 
-Rajveer Saggu
-GitHub
- | LinkedIn
+---
 
-🏁 License
+## Advanced Tips
 
-This project is licensed under the MIT License — feel free to use and modify.
+   Use a larger spaCy model for better accuracy:
+   python -m spacy download en_core_web_md
+
+   Then edit ranker.py to use:
+   nlp = spacy.load("en_core_web_md")
+
+## 🧑‍💻 Author
+
+   Rajveer Singh Saggu
+
+##🏁 License
+
+   This project is licensed under the MIT License — feel free to use and modify.
 
 
 ---
